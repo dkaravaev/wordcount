@@ -9,12 +9,11 @@ import (
 )
 
 func main() {
-	//rdr := bufio.NewReader(os.Stdin)
-	//tr, _ := rdr.ReadString('\n')
-
 	var pattern string
 	flag.StringVar(&pattern, "", "", "data")
 	flag.Parse()
 
-	fmt.Println(len(strings.Fields(flag.Args()[0])))
+	if len(flag.Args()) != 0 {
+		fmt.Println(len(strings.Fields(flag.Args()[0])))
+	}
 }

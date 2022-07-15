@@ -3,17 +3,13 @@
 package main
 
 import (
-	"flag"
 	"fmt"
+	"os"
 	"strings"
 )
 
 func main() {
-	var pattern string
-	flag.StringVar(&pattern, "", "", "data")
-	flag.Parse()
-
-	if len(flag.Args()) != 0 {
-		fmt.Println(len(strings.Fields(flag.Args()[0])))
+	if len(os.Args) >= 2 {
+		fmt.Println(len(strings.Fields(os.Args[1])))
 	}
 }

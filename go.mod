@@ -1,3 +1,3 @@
-module github.com/dkaravaev/wordcount.git
+module github.com/dkaravaev/wordcount
 
 go 1.13
